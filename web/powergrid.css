@@ -73,6 +73,17 @@
     box-sizing: border-box;
 }
 
+.pg-removable.display {
+    position: absolute;
+    box-sizing: border-box;
+    width: 15px;
+    height: 100%;
+    top: 0px;
+    transition: 0.5s ease;
+    background-color: red;
+    display: block;
+}
+
 .pg-columnheader > .pg-resizehandle {
     position: absolute;
     display: block;

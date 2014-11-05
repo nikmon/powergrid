@@ -56,6 +56,10 @@ define(['jquery', 'vein', 'utils', 'promise'], function($, vein, utils, Promise)
             grid.beginInit(resolve);
         });
         
+        $(target).on('remove', function() { 
+        	grid.destroy();
+        	}
+        );
         this.id = target.attr('id');
     }
 
@@ -522,7 +526,7 @@ define(['jquery', 'vein', 'utils', 'promise'], function($, vein, utils, Promise)
         },
 
         _removeRows: function(start, end) {
-            console.log("Removing rows " +start + " to " + end);
+            console.log("Removing rows" +start + " to " + end);
             function r(start, end, rowgroup) {
                 var selector = ".pg-row:lt(" + end + ")";
                 if(start > 0) {
